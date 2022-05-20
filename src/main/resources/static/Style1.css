@@ -1,0 +1,159 @@
+* {
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+
+body {
+    background: #ff006e;
+    font-family: "calibri";
+    background-image: url(https://fondosmil.com/fondo/52487.png);
+}
+
+header {
+    background: #141414;
+    width: 100%;
+    clear: both;
+    content: '';
+    display: table;
+}
+
+.menu {
+    width: 900px;
+    margin: 0auto;
+}
+
+
+img {
+    width: 150px;
+    height: 70px;
+    float: left;
+}
+
+nav {
+    float: right;
+}
+
+nav ul li {
+    list-style: none;
+    margin-left: 75px;
+    padding: 22px 0;
+    float: left;
+    position: relative;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+}
+
+nav ul li a::before {
+    display: block;
+    content: '';
+    width: 0%;
+    background: rgb(224, 224, 224);
+    height: 5px;
+    top: 0;
+    position: absolute;
+    transition: width 0.2s;
+}
+
+nav ul li a:hover::before {
+    width: 100%;
+}
+
+.contenedor-main{
+    width: 900px;
+    height: 500px;
+    background-color:rgba(0, 0, 0, 0.510);
+    margin: auto;
+    margin-top: 180px;
+    box-shadow: 13px 13px 13px rgba(0, 0, 0, 0.904);
+    padding: 20px 30px;
+    border-top: 5px solid rgba(0, 0, 0, 0.685);
+    color: rgb(255, 255, 255);
+}
+
+.contenedor-botones {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    display: flex;
+    position: relative;
+    top: 50%;
+    bottom: 50%;
+    left: 50%;
+    right: 50%;
+}
+
+/* BOTONES */
+.boton {
+    position: relative;
+    top: 50%;
+    right: 350px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    height: 80px;
+    background: #141414;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: .3s ease all;
+    border-radius: 5px;
+
+    overflow: hidden;
+}
+
+.boton span {
+    position: relative;
+    z-index: 2;
+    transition: .3s ease all;
+}
+
+.boton:after {
+    content: "";
+    width: 100%;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: calc(-100% - 80px);
+    border-bottom: 80px solid #286cff;
+    border-right: 80px solid transparent;
+    transition: .4s ease-in-out all;
+}
+
+.boton:hover::after {
+    left: 0;
+}
+
+/* LO DE ABAJO ES POR SI PINTA USAR UNA BARRA DE NAVEGACION */
+/* .search_bar {
+    width: 15%;
+    float: left;
+    padding: 7px 10px;
+    box-sizing: border-box;
+    float: right;
+}
+
+.search_bar input {
+    width: 100%;
+    height: auto;
+    border-radius: 50px;
+    border: none;
+    border-bottom: 1px solid #858585;
+    padding: 0px 10px ®px 25px;
+    box-sizing: border-box;
+    height: 22px;
+    box-shadow: inset Opx 1px 3px rgba(0, 0, 0, .7);
+    float: right;
+} */
+
+

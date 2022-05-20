@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="../Style5.css">
+    </head>
+    <body>
+        <section class="contenedor">
+
+            <h3>Ingresar libro</h3>
+            <form action="/libro/registro" method="Post" >
+
+                <p>ISBN del libro</p>
+                <input class="controls" type="text" placeholder="13 numeros" name="ISBN">
+
+                <p>Titulo del libro</p>
+                <input class="controls" type="text" placeholder="Ej. Evangelion" name="titulo">
+
+                <p>Año del libro</p>
+                <input class="controls" type="text" placeholder="Ej. 2017" name="anio">
+
+                <p>Autor del libro</p>
+                <select class="form-control"name="autor"></select>
+                <option th:each="autor:${autores}" th:text="${autor}"></option>
+
+                <p>Editorial del libro</p>
+                <select class="form-control"name:me="editorial"></select>
+                <option th:each="editorial:${editoriales)" th:text="${editorial)"></option>
+
+                <button type="submit" class="boton">Enviar</button>
+
+            </form>
+        </section>
+    </body>
+</html>

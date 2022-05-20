@@ -1,0 +1,140 @@
+* {
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(../images.png);
+    font-family: "calibri";
+}
+
+header {
+    background: #141414;
+    width: 100%;
+    clear: both;
+    content: '';
+    display: table;
+}
+
+.menu {
+    width: 900px;
+    margin: 0auto;
+}
+
+
+img {
+    width: 150px;
+    height: 70px;
+    float: left;
+}
+
+nav {
+    float: right;
+}
+
+nav ul li {
+    list-style: none;
+    margin-left: 75px;
+    padding: 22px 0;
+    float: left;
+    position: relative;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+}
+
+nav ul li a::before {
+    display: block;
+    content: '';
+    width: 0%;
+    background: rgb(224, 224, 224);
+    height: 5px;
+    top: 0;
+    position: absolute;
+    transition: width 0.2s;
+}
+
+nav ul li a:hover::before {
+    width: 100%;
+}
+
+.contenedor-main{
+    width: 1000px;
+    height: 600px;
+    background-color:  rgba(0, 0, 0, 0.450);
+    margin: auto;
+    margin-top: 100px;
+    box-shadow: 13px 13px 13px rgba(0, 0, 0, 0.349);
+    padding: 20px 30px;
+    color: rgb(255, 255, 255);
+    border-radius: 10px
+}
+
+.contenedor-botones {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    display: flex;
+    position: relative;
+    top: 50%;
+    bottom: 50%;
+    left: 50%;
+    right: 50%;
+    margin-bottom: 500px;
+}
+
+/* BOTONES */
+.boton {
+    position: relative;
+    top: 50%;
+    right: 350px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    height: 70px;
+    background: #141414;
+    color: #fff;
+    font-family: 'Roboto Slab', serif;
+    font-size: 20px;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+    /*    text-transform: uppercase;*/
+    transition: .3s ease all;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.boton a{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+
+}
+
+.boton span {
+    position: relative;
+    z-index: 2;
+    transition: .3s ease all;
+}
+
+.boton:after {
+    content: "";
+    width: 100%;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: calc(-100% - 80px);
+    border-bottom: 80px solid #286cff;
+    border-right: 80px solid transparent;
+    transition: .4s ease-in-out all;
+}
+
+.boton:hover::after {
+    left: 0;
+}
